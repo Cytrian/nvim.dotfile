@@ -29,7 +29,8 @@ return {
            "html-lsp",
            "prettier",
            "json-lsp",
-	   "stylua",
+           "stylua",
+           "terraform-ls"
          },
       },
    }
