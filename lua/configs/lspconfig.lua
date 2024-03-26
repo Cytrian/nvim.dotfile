@@ -24,3 +24,6 @@ lspconfig.terraformls.setup({
      return util.root_pattern(".terraform", ".git")(dirpath) or util.path.dirname(dirpath)
   end,
 })
+
+local tf_capb = vim.lsp.protocol.make_client_capabilities()
+tf_capb.textDocument.completion.completionItem.snippetSupport = true
