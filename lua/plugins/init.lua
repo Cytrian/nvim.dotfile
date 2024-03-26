@@ -12,4 +12,25 @@ return {
       git = { enable = true },
     },
   },
+
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      require("nvchad.configs.lspconfig").defaults()
+      require "configs.lspconfig"
+    end,
+  },
+
+  {
+    "williamboman/mason.nvim",
+      opts = {
+         ensure_installed = {
+           "lua-language-server",
+           "html-lsp",
+           "prettier",
+           "json-lsp",
+	   "stylua",
+         },
+      },
+   }
 }
